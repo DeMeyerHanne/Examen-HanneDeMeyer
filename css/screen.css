@@ -19,6 +19,7 @@
     --global-color-focus-and-check-radio: #4E00EA;
     --global-backgroundcolor-button: #4E00EA;
     --global-color-boxshadow-button: #4900E64D;
+    --global-color-footer: #A2A1A6;
 
     /* Baseline settings */
     --global-baseline: 8px;         
@@ -487,8 +488,9 @@ input:disabled {
 
 .c-buttons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
 }
 
 .c-button-volgende {
@@ -514,6 +516,31 @@ input:disabled {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
+}
+
+
+/* 
+    footer
+*/
+
+.c-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid var(--global-backgroundcolor-radiobutton);
+}
+
+.c-line {
+    width: 348px;
+    border: 0.5rem solid var(--global-backgroundcolor-radiobutton);
+    border-radius: 1rem;
+}
+
+.c-footer-text {
+    font-size: 0.875rem;
+    font-family: inherit;
+    font-weight: 400;
+    color: var(--global-color-footer);
 }
 
 
