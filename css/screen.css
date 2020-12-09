@@ -450,6 +450,10 @@ input:disabled {
     outline: none;
 }
 
+.c-input:focus {
+    border: 1px solid #4E00EA;
+}
+
 .c-option-list {
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
@@ -546,18 +550,17 @@ input:disabled {
 
 .c-button-volgende:hover {
     background-color: #6A00FD;
-    box-shadow: 0 0.3125rem #4900E64D;
+    border: 3px solid #4900E64D;
 }
 
 .c-button-volgende:focus {
     background-color: #4E00EA;
-    box-shadow: #4900E64D;
+    box-shadow: 0 0.1875rem #4900E64D;
 }
 
 .c-button-volgende:active {
     background-color: #4C09DB;
-    border-color: ;
-    box-shadow: 0  #4900E64D;
+    box-shadow: 0 0.0625rem #4900E64D;
 }
 
 /* 
