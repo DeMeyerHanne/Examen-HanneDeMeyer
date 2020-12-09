@@ -301,10 +301,6 @@ input:disabled {
     margin-bottom: 2rem;
 }
 
-.o-section + .o-section {
-    padding-top: 8px;
-}
-
 /*
     Objects: List
     ---
@@ -426,6 +422,34 @@ input:disabled {
     Class to put on all input="text" like form inputs
 */
 
+.c-form-field-input {
+    margin-bottom: 2rem;
+}
+
+.c-form-field--option {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 1px solid var(--global-backgroundcolor-radiobutton);
+    border-radius: 0.3125rem;
+    color: var(--global-color-footer);
+    background-color: var(--global-backgroundcolor-card);
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 400;
+    height: 160px ;
+    outline: none;
+}
+
 .c-option-list {
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
@@ -494,34 +518,6 @@ input:disabled {
 
 
 /*
-    Component: Dashboard
-    ---
-    Dashboard component with CSS grid
-*/
-
-.c-dashboard {
-    display: grid;
-    grid-gap: var(--global-whitespace-lg);
-    margin-bottom: 0.75rem;
-}
-
-.c-dashboard__item {
-    box-shadow: var(--global-box-shadow);
-    background-color: #fff;
-}
-
-@media screen and (min-width: 62em) {
-    .c-dashboard {
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    .c-dashboard__item {
-        grid-column: 1 / -1;
-    }
-}
-
-
-/*
     Component: Button
     ---
     Class to put on form buttons or
@@ -546,6 +542,22 @@ input:disabled {
     width: 13rem;
     border: none;
     transition: all var(--global-transitionTiming-alpha);
+}
+
+.c-button-volgende:hover {
+    background-color: #6A00FD;
+    box-shadow: 0 0.3125rem #4900E64D;
+}
+
+.c-button-volgende:focus {
+    background-color: #4E00EA;
+    box-shadow: #4900E64D;
+}
+
+.c-button-volgende:active {
+    background-color: #4C09DB;
+    border-color: ;
+    box-shadow: 0  #4900E64D;
 }
 
 /* 
@@ -662,52 +674,6 @@ input:disabled {
 
 .u-max-width-none {
     max-width: none !important;
-}
-
-
-/*
-    Utilities: span
-    Utility classes to span grid items across the x and y axis
-*/
-
-/* x: horizontal */
-
-@media (min-width: 62em) {
-
-    .u-x-span-3-bp3 {
-        grid-column: span 3;
-    }
-
-    .u-x-span-4-bp3 {
-        grid-column: span 4;
-    }
-
-    .u-x-span-5-bp3 {
-        grid-column: span 5;
-    }
-
-    .u-x-span-6-bp3 {
-        grid-column: span 6;
-    }
-
-    .u-x-span-8-bp3 {
-        grid-column: span 8;
-    }
-
-    .u-x-span-9-bp3 {
-        grid-column: span 9;
-    }
-
-}
-
-/* y: vertical */
-
-@media (min-width: 62em) {
-
-    .u-y-span-2-bp3 {
-        grid-row: span 2;
-    }
-
 }
 
 
