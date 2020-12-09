@@ -456,9 +456,14 @@ input:disabled {
 
 .c-custom-option__fake-input--checkbox {
     border-radius: 1rem;
-    width: 3.8125rem;
+    min-width: 3.8125rem;
     height: var(--global-whitespace-lg);
-    color: red;
+    background-color: var(--global-backgroundcolor-radiobutton);
+
+    color: var(--global-color-text);
+    font-size: 0.875rem;
+    font-family: inherit;
+    font-weight: 400;
 }
 
 .c-custom-option__symbol {
@@ -479,11 +484,40 @@ input:disabled {
 .c-option--hidden:active + .c-custom-option .c-custom-option__fake-input {
     border-color: var(--global-color-focus-and-check-radio);
     background-color: var(--global-color-focus-and-check-radio);
+    color: var(--global-backgroundcolor-card);
 }
 
 .c-option--hidden {
     border-color: var(--global-backgroundcolor-radiobutton);
     fill: var(--global-backgroundcolor-radiobutton)
+}
+
+
+/*
+    Component: Dashboard
+    ---
+    Dashboard component with CSS grid
+*/
+
+.c-dashboard {
+    display: grid;
+    grid-gap: var(--global-whitespace-lg);
+    margin-bottom: 0.75rem;
+}
+
+.c-dashboard__item {
+    box-shadow: var(--global-box-shadow);
+    background-color: #fff;
+}
+
+@media screen and (min-width: 62em) {
+    .c-dashboard {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .c-dashboard__item {
+        grid-column: 1 / -1;
+    }
 }
 
 
@@ -628,6 +662,52 @@ input:disabled {
 
 .u-max-width-none {
     max-width: none !important;
+}
+
+
+/*
+    Utilities: span
+    Utility classes to span grid items across the x and y axis
+*/
+
+/* x: horizontal */
+
+@media (min-width: 62em) {
+
+    .u-x-span-3-bp3 {
+        grid-column: span 3;
+    }
+
+    .u-x-span-4-bp3 {
+        grid-column: span 4;
+    }
+
+    .u-x-span-5-bp3 {
+        grid-column: span 5;
+    }
+
+    .u-x-span-6-bp3 {
+        grid-column: span 6;
+    }
+
+    .u-x-span-8-bp3 {
+        grid-column: span 8;
+    }
+
+    .u-x-span-9-bp3 {
+        grid-column: span 9;
+    }
+
+}
+
+/* y: vertical */
+
+@media (min-width: 62em) {
+
+    .u-y-span-2-bp3 {
+        grid-row: span 2;
+    }
+
 }
 
 
