@@ -32,30 +32,43 @@
                         Graag ontvangen we je mening over de cursus die je zojuist hebt voltooid, inclusief feedback over de cursusstructuur, de
                         content en de docent.
                     </p>
-                    <p>
-                        Vond je het een leuke module tot nu toe?
-                    </p>
-                    <ul>
-                        <li>
-                            <input type="radio" name="radios" id="radio1" required>
-                            <label>
-                                Ja
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radios" id="radio2" required>
-                            <label>
-                                Zeker
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radios" id="radio3" required>
-                            <label>
-                                Absoluut
-                            </label>
-                        </li>
-                    </ul>
-                    <p>
+                    <!-- radiobuttons -->
+                    <div class="o-section">
+                        <p class="c-card__question">
+                            Vond je het een leuke module tot nu toe?
+                        </p>
+                        <ul class="o-list c-option-list">
+                            <li class="c-form-field c-form-field--option c-option-list__item">
+                                <input class="c-option c-option--hidden o-hide-accessible" type="radio" name="radios" id="radio1" required>
+                                <label class="c-label c-label--option c-custom-option" for="radio1">
+                                    <span class="c-custom-option__fake-input c-custom-option__fake-input--radio">
+                                        <span class="c-custom-option__symbol"></span>
+                                    </span>
+                                    Ja
+                                </label>
+                            </li>
+                            <li class="c-form-field c-form-field--option c-option-list__item">
+                                <input class="c-option c-option--hidden o-hide-accessible" type="radio" name="radios" id="radio2" required>
+                                <label class="c-label c-label--option c-custom-option" class="c-label c-label--option c-custom-option" for="radio2">
+                                    <span class="c-custom-option__fake-input c-custom-option__fake-input--radio">
+                                        <span class="c-custom-option__symbol"></span>
+                                    </span>
+                                    Zeker
+                                </label>
+                            </li>
+                            <li class="c-form-field c-form-field--option c-option-list__item">
+                                <input class="c-option c-option--hidden o-hide-accessible" type="radio" name="radios" id="radio3" required>
+                                <label class="c-label c-label--option c-custom-option" class="c-label c-label--option c-custom-option" for="radio3">
+                                    <span class="c-custom-option__fake-input c-custom-option__fake-input--radio">
+                                        <span class="c-custom-option__symbol"></span>
+                                    </span>
+                                    Absoluut
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- checkboces -->
+                    <p class="c-card__question">
                         Waar ging de module over?
                     </p>
                     <ul>
@@ -109,7 +122,7 @@
                         </li>
                     </ul>
                     <p>
-                        <label>
+                        <label class="c-card__question">
                             Wat zou je veranderen?
                         </label>
                         <textarea name="changes" id="changes"></textarea>

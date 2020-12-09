@@ -14,6 +14,20 @@
     --global-color-card__border: #17161A0D;
     --global-color-title: #17161A;
     --global-color-text: #47454D;
+    --global-color-question: #17161A;
+    --global-backgroundcolor-radiobutton: #DCDAE0;
+
+    /* Baseline settings */
+    --global-baseline: 8px;         
+    --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
+
+    --global-whitespace-xs: calc(var(--global-baseline) / 2); /* = 4px */
+    --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
+    --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
+    --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
+    --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
+    --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+
     /* fonts */
 
     /* shadows */
@@ -378,8 +392,62 @@ input:disabled {
     font-size: 1rem;
     font-family: inherit;
     font-weight: 600;
-    color: var(--global-color-card__border);
+    color: var(--global-color-question);
     margin-bottom: 0.5rem;
+}
+
+
+/*
+    Component: Label
+    ---
+    Class to put on all form labels
+*/
+
+.c-label {
+    margin-bottom: 0.5625rem;
+    font-size: 1rem;
+    color: var(--global-color-text);
+    line-height: calc(var(--global-baseline) * 2);
+}
+
+.c-label--option {
+    padding-bottom: 0;
+}
+
+/*
+    Component: Input
+    ---
+    Class to put on all input="text" like form inputs
+*/
+
+.c-option-list {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.c-option {
+    margin-right: 1.5rem;
+}
+
+.c-custom-option {
+    display: flex;
+    align-items: center;
+}
+
+.c-custom-option__fake-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem  ;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid var(--global-backgroundcolor-radiobutton);
+}
+
+
+.c-option--hidden {
+    border-color: var(--global-backgroundcolor-radiobutton);
+    fill: var(--global-backgroundcolor-radiobutton)
 }
 
 
