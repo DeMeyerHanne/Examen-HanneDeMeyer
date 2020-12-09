@@ -61,14 +61,15 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--global-backgroundcolor-page);
+    width: 100%;
+    height: 100vh;
 }
 
-/* @media (min-width: 992px){
+@media (prefers-color-scheme: dark) {
     html {
-        width: 100%;
-        height: 100vh;
+        background-color: #17161A;
     }
-} */
+}
 
 *,
 *:before,
@@ -398,6 +399,25 @@ input:disabled {
     margin-bottom: 0.5rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    .c-card {
+        background-color: #232226;
+        border-top: 0.5rem solid #8B33FB;
+    }
+
+    .c-card__title {
+        color: #FFFFFF;
+    }
+
+    .c-card__text {
+        color: #DCDAE0;
+    }
+
+    .c-card__question {
+        color: #FFFFFF;
+    }
+}
+
 
 /*
     Component: Label
@@ -508,11 +528,19 @@ input:disabled {
     border-radius: 100%;
 }
 
+.c-option--hidden:hover + .c-custom-option .c-custom-option__fake-input {
+    border-color: var(--global-backgroundcolor-top-left);
+}
+
+.c-option--hidden:focus + .c-custom-option .c-custom-option__fake-input {
+    border-color: 3px solid #4E00EA4D;
+}
+
 .c-option--hidden:focus + .c-custom-option .c-custom-option__fake-input, 
 .c-option--hidden:active + .c-custom-option .c-custom-option__fake-input {
-    border-color: var(--global-color-focus-and-check-radio);
     background-color: var(--global-color-focus-and-check-radio);
     color: var(--global-backgroundcolor-card);
+    border-color: 3px solid #4E00EA4D;
 }
 
 .c-option--hidden {
