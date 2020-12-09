@@ -17,6 +17,8 @@
     --global-color-question: #17161A;
     --global-backgroundcolor-radiobutton: #DCDAE0;
     --global-color-focus-and-check-radio: #4E00EA;
+    --global-backgroundcolor-button: #4E00EA;
+    --global-color-boxshadow-button: #4900E64D;
 
     /* Baseline settings */
     --global-baseline: 8px;         
@@ -36,6 +38,7 @@
     /* borders */
 
     /* transitions */
+    --global-transitionTiming-alpha: .1s ease-out;
 }
 
 /*------------------------------------*\
@@ -470,13 +473,49 @@ input:disabled {
     background-color: var(--global-color-focus-and-check-radio);
 }
 
-
-
-
 .c-option--hidden {
     border-color: var(--global-backgroundcolor-radiobutton);
     fill: var(--global-backgroundcolor-radiobutton)
 }
+
+
+/*
+    Component: Button
+    ---
+    Class to put on form buttons or
+*/
+
+.c-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.c-button-volgende {
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    background-color: var(--global-backgroundcolor-button);
+    color: var(--global-backgroundcolor-card);
+    box-shadow: 0 0.1875rem var(--global-color-boxshadow-button);
+    border-radius: 0.3125rem;
+    line-height: calc(var(--global-baseline) * 6);
+    width: 13rem;
+    border: none;
+    transition: all var(--global-transitionTiming-alpha);
+}
+
+/* 
+    svg vorige
+*/
+.c-svg__style {
+    fill: none;
+    stroke: #17161a;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+}
+
 
 
 /*------------------------------------*\
