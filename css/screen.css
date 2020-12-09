@@ -16,6 +16,7 @@
     --global-color-text: #47454D;
     --global-color-question: #17161A;
     --global-backgroundcolor-radiobutton: #DCDAE0;
+    --global-color-focus-and-check-radio: #4E00EA;
 
     /* Baseline settings */
     --global-baseline: 8px;         
@@ -293,6 +294,7 @@ input:disabled {
 
 .o-section {
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .o-section + .o-section {
@@ -438,11 +440,37 @@ input:disabled {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1rem  ;
-    height: 1rem;
+    width: var(--global-whitespace-md);
+    height: var(--global-whitespace-md);
     margin-right: 0.5rem;
     border: 1px solid var(--global-backgroundcolor-radiobutton);
 }
+
+.c-custom-option__fake-input--radio {
+    border-radius: 100%;
+}
+
+.c-custom-option__symbol {
+    opacity: 0;
+    display: block;
+    will-change: opacity;
+    transition: opacity 250ms ease-in, transform 250ms cubic-bezier(0.78, -0.01, 0.765, 2);
+}
+
+.c-custom-option__fake-input--radio .c-custom-option__symbol {
+    width: 0.375rem;
+    height: 0.375rem;
+    fill: var(--global-backgroundcolor-card);  /* zou het puntje in het midden moeten zijn */
+    border-radius: 100%;
+}
+
+.c-option--hidden:focus + .c-custom-option .c-custom-option__fake-input, 
+.c-option--hidden:active + .c-custom-option .c-custom-option__fake-input {
+    border-color: var(--global-color-focus-and-check-radio);
+    background-color: var(--global-color-focus-and-check-radio);
+}
+
+
 
 
 .c-option--hidden {
